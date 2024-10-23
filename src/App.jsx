@@ -23,24 +23,14 @@ const Home = () => {
         <SpinTheWheel
           userId={userId}
           token={token}
-          maxSpins={20}
-          rewards={[
-            "Whiskey/Vodka",
-            "Water",
-            "Griptok",
-            "1 MYST",
-            "10 MYST",
-            "20 MYST",
-            "1 XP",
-            "50 XP",
-            "10 XP",
-            "100 XP",
-          ]}
-          wheelColors={{ primary: "#C9A14C26", secondary: "white" }}
+          maxSpins={200}
+          wheelColors={{ primary: "red", secondary: "yellow" }}
+          wheelTextColor={{ primary: 'white', secondary: 'black' }}
           questId={'q-cfe01b6c-2309-43f3-9015-cd9cf4450ee2'}
           wheelImage={reactLogo}
           criteriaId={'ec-c39be013-5356-4c49-9f87-673357b25b58'}
           onSpinComplete={onSpinComplete}
+          winningSegmentColor='green'
         />
       </QuestProvider>
     </div>
