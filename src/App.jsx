@@ -11,7 +11,8 @@ const Home = () => {
   const [searchParams] = useSearchParams();
   const token = searchParams.get('token') || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1LTdiM2E2MzAxLTcxMWMtNGMwZC1hZTYzLWQ5M2RiZTJjZWVlOSIsImlhdCI6MTcyOTI0MTQyNywiZXhwIjoxNzI5ODQ2MjI3fQ.dcyFJF3hm28nUp_uY552R4GqaX9z3kX6m3frs-WOtzs';
   const userId = searchParams.get('userId') || 'u-0000000000';
-
+  const questId = searchParams.get(questId) || 'q-9e835339-2258-43fd-badd-87ab9315036f'
+  const criteriaId = searchParams.get(criteriaId) || 'ec-6c6ca555-2a42-428a-bc40-b84b5bcd0d97'
   const onSpinComplete = () => {
     console.log('Spin Completed');
   }
@@ -26,9 +27,9 @@ const Home = () => {
           maxSpins={200}
           wheelColors={{ primary: "red", secondary: "yellow" }}
           wheelTextColor={{ primary: 'white', secondary: 'black' }}
-          questId={'q-cfe01b6c-2309-43f3-9015-cd9cf4450ee2'}
+          questId={questId}
           wheelImage={reactLogo}
-          criteriaId={'ec-c39be013-5356-4c49-9f87-673357b25b58'}
+          criteriaId={criteriaId}
           onSpinComplete={onSpinComplete}
           winningSegmentColor='green'
         />
