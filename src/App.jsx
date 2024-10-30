@@ -32,6 +32,15 @@ const Home = () => {
           criteriaId={criteriaId}
           onSpinComplete={onSpinComplete}
           winningSegmentColor='green'
+          onCompletedCriteriaUserClick={() => {
+            console.log('Completed Criteria User Click');
+          }}
+          onGuestUserClick={() => {
+            console.log('Guest User Click');
+          }}
+          claimButtonText='Redeem'
+          isAccumulateXP={true}
+          isImgShow={true}
         />
       </QuestProvider>
     </div>
